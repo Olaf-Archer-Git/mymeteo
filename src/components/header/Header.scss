@@ -4,7 +4,8 @@
 .header__menu {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  max-width: 100%;
 }
 
 .header {
@@ -21,10 +22,14 @@
   &__link {
     color: $red;
     transition: all 0.4s;
+    position: relative;
+    padding-bottom: 0.2rem;
+    transition: all 0.3s;
   }
 
   &__link:hover {
     color: $green;
+    border-bottom: 0.2rem solid $green;
   }
 
   &__btn {
@@ -75,7 +80,7 @@
     top: 15vh;
     right: 0;
     width: 50%;
-    height: 85vh;
+    height: 70vh;
     flex-direction: column;
     background: $red;
     transform: translateX(100%);
