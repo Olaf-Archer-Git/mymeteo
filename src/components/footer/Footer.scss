@@ -15,16 +15,17 @@
 
   &__link {
     padding: 0 1rem 0 1rem;
-    transition: all 0.3s;
     max-width: 100%;
   }
 
   &__link a {
     color: $green;
+    transition: all 0.4s;
   }
 
-  &__link:active {
-    transform: translateY(0.15rem);
+  &__link a:hover {
+    color: $red;
+    border-bottom: 0.2rem solid $red;
   }
 
   &__text {

@@ -10,6 +10,9 @@ const Header = () => {
     active === "header__menu"
       ? setActive("header__menu header__active")
       : setActive("header__menu");
+  };
+
+  const headerIcon = () => {
     icon === "header__switcher"
       ? setIcon("header__switcher header__icon")
       : setIcon("header__switcher");
@@ -51,7 +54,13 @@ const Header = () => {
         </li>
       </ul>
 
-      <div onClick={headerActive} className={icon}>
+      <div
+        onClick={() => {
+          headerActive();
+          headerIcon();
+        }}
+        className={icon}
+      >
         <div className="line1"></div>
         <div className="line2"></div>
         <div className="line3"></div>
