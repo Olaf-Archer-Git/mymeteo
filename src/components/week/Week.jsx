@@ -44,7 +44,7 @@ const Week = () => {
   };
 
   return (
-    <div className="week">
+    <section className="week">
       <div className="accordion">
         {data.map((item, index) => {
           return (
@@ -74,7 +74,7 @@ const Week = () => {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 };
 
