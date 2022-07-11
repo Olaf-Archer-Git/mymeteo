@@ -4,7 +4,7 @@ import Footer from "./components/footer/Footer";
 // import Home from "./components/home/Home";
 // import Week from "./components/week/Week";
 // import Error from "./components/error/Error";
-import Maps from "./components/maps/Maps";
+import Map from "./components/map/Map";
 
 import "./App.scss";
 
@@ -15,7 +15,7 @@ const App = () => {
       {/* <Home /> */}
       {/* <Week /> */}
       {/* <Error /> */}
-      <Maps />
+      <Map />
       <Footer />
     </main>
   );
