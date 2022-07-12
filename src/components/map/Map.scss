@@ -7,8 +7,8 @@
     top: 2vh;
     z-index: 5;
     padding: 0.2rem 0.4rem;
-    border-radius: 0.1rem;
-    border: 0.2rem solid rgb(255, 255, 255);
+    border-radius: 0.3rem;
+    border: 0.2rem solid rgb(235, 235, 235);
     background: rgb(96, 140, 175);
     color: white;
     cursor: pointer;
@@ -17,13 +17,5 @@
 
   &__btn:hover {
     background: rgb(50, 114, 167);
-  }
-
-  &__clouds {
-    display: block;
-  }
-
-  &__temp {
-    display: none;
   }
 }

@@ -5,6 +5,7 @@ import Footer from "./components/footer/Footer";
 // import Week from "./components/week/Week";
 // import Error from "./components/error/Error";
 import Map from "./components/map/Map";
+// import Login from "./components/login/Login";
 
 import "./App.scss";
 
@@ -16,6 +17,7 @@ const App = () => {
       {/* <Week /> */}
       {/* <Error /> */}
       <Map />
+      {/* <Login /> */}
       <Footer />
     </main>
   );
