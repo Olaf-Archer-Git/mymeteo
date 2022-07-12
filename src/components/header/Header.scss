@@ -1,0 +1,125 @@
+@import "../../constants/styles.scss";
+
+.header,
+.header__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.header {
+  border-top: 2vh solid $red;
+  border-bottom: 2vh solid $red;
+  height: 11vh;
+  background-color: $white;
+
+  &__menu {
+    gap: 2rem;
+  }
+
+  &__link {
+    color: $red;
+    transition: all 0.4s;
+    position: relative;
+    padding-bottom: 0.2rem;
+    transition: all 0.3s;
+  }
+
+  &__link:hover {
+    color: $green;
+    border-bottom: 0.2rem solid $green;
+  }
+
+  &__btn {
+    padding: 0.15rem 0.7rem;
+    border: 0.15rem solid $green;
+    border-radius: $border;
+    color: $green;
+    transition: all 0.5s;
+    margin-right: 0.5rem;
+  }
+
+  &__btn:last-child {
+    border: 0.15rem solid $red;
+    color: $red;
+  }
+
+  &__btn:hover {
+    background: $red;
+    color: $white;
+    border: 0.15rem solid $white;
+  }
+
+  &__btn:last-child:hover {
+    background: $green;
+    border: 0.15rem solid $green;
+    color: $white;
+  }
+
+  &__switcher div {
+    width: 2rem;
+    height: 0.2rem;
+    margin: 0.4rem;
+    background: $green;
+  }
+  &__switcher {
+    cursor: pointer;
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header__switcher {
+    display: block;
+  }
+
+  .header__menu {
+    position: fixed;
+    top: 10vh;
+    right: 0;
+    width: 50%;
+    height: 80vh;
+    flex-direction: column;
+    background: $red;
+    transform: translateX(100%);
+    transition: 0.5s ease-in;
+    z-index: 100;
+  }
+
+  .header__link {
+    color: $white;
+  }
+
+  .header__btn {
+    color: $white;
+    border: 0.15rem solid $white;
+    display: flex;
+    margin-bottom: 1rem;
+  }
+
+  .header__btn:last-child {
+    color: $white;
+    border: 0.15rem solid $white;
+  }
+
+  .header__btn:hover {
+    color: $green;
+    border: 0.15rem solid $green;
+  }
+
+  .header__active {
+    transform: translateX(0%);
+  }
+
+  .header__icon .line1 {
+    transform: rotate(-45deg) translate(-8px, 10px);
+  }
+
+  .header__icon .line2 {
+    opacity: 0;
+  }
+
+  .header__icon .line3 {
+    transform: rotate(45deg) translate(-4px, -5px);
+  }
+}

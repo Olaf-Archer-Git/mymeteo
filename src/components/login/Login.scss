@@ -1,0 +1,19 @@
+.login {
+  margin: 10%;
+}
+
+// .login-btn {
+
+// }
+.active {
+  display: inline-block;
+  border: 2px solid red;
+  color: red;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.disactive {
+  border: 2px solid blue;
+  color: blue;
+}

@@ -1,0 +1,86 @@
+@import "../../constants/styles.scss";
+
+.home {
+  background-image: linear-gradient(
+      rgba(19, 189, 102, 0.484),
+      rgba(9, 109, 142, 0.422)
+    ),
+    url("../../assets/cloudy.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  min-height: 80vh;
+
+  &__container {
+    width: 35%;
+    min-width: 18rem;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__search {
+    width: 100%;
+    position: relative;
+    display: flex;
+    margin-bottom: 1rem;
+  }
+
+  &__input {
+    width: 100%;
+    color: $green;
+    font-size: 1.1rem;
+    border: 0.2rem solid $red;
+    border-right: none;
+    padding: 0.5rem;
+    height: 2.5rem;
+    border-radius: $border 0 0 $border;
+    outline: none;
+  }
+
+  &__input::placeholder {
+    color: $green;
+  }
+
+  &__btn {
+    width: 4rem;
+    height: 2.5rem;
+    border: 0.2rem solid $red;
+    background: $red;
+    text-align: center;
+    border-radius: 0 $border $border 0;
+    cursor: pointer;
+  }
+
+  &__icon:hover {
+    transform: scale(1.15);
+    transition: all 0.3s;
+  }
+}
+
+.home {
+  &__content {
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    color: azure;
+    font-size: 1.5rem;
+    letter-spacing: 0.05rem;
+  }
+
+  &__title {
+    font-weight: 300;
+    margin-bottom: 1rem;
+  }
+
+  &__item {
+    margin-bottom: 0.2rem;
+  }
+
+  &__item span {
+    margin: 0 0.3rem 0 1rem;
+    font-family: "Cookie", cursive;
+    font-size: 1.8rem;
+  }
+}

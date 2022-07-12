@@ -1,0 +1,38 @@
+@import "../../constants/styles.scss";
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 11vh;
+  border-top: 2vh solid $red;
+  border-bottom: 2vh solid $red;
+  background-color: $white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  &__link {
+    padding: 0 1rem 0 1rem;
+    max-width: 100%;
+  }
+
+  &__link a {
+    color: $green;
+    transition: all 0.4s;
+  }
+
+  &__link a:hover {
+    color: $red;
+    border-bottom: 0.2rem solid $red;
+  }
+
+  &__text {
+    font-style: italic;
+    color: $red;
+    max-width: 100%;
+    font-family: "Cookie", cursive;
+    font-size: 1.3rem;
+  }
+}
