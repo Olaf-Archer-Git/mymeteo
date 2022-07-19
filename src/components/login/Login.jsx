@@ -1,30 +1,31 @@
 import React from "react";
-import { useState } from "react";
-
 import "./Login.scss";
 
 const Login = () => {
-  const [text, setText] = useState("login");
-  const [active, setActive] = useState(false);
-
-  const toggler = () => {
-    text === "login" ? setText("button") : setText("login");
-  };
-
-  const swit = () => {
-    setActive(!active);
-  };
-
   return (
     <div className="login">
-      <div
-        onClick={() => {
-          toggler();
-          swit();
-        }}
-        className={`active ${active ? "disactive" : ""}`}
-      >
-        {text}
+      <div className="login__wrap">
+        <div className="login__content">
+          <h2 className="login__title">
+            wellcome back <span>log in</span>
+          </h2>
+          <input className="login__input" type="email" placeholder="e-mail" />
+
+          <input
+            className="login__input"
+            type="password"
+            placeholder="password"
+          />
+          <div className="login__btn">log in</div>
+
+          <div className="login__text">
+            don&apos;t have an account?
+            <a href="/signup" className="login__link">
+              sign up
+            </a>
+          </div>
+        </div>
+        <div className="login__container"></div>
       </div>
     </div>
   );

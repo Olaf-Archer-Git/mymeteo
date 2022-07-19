@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
+
 import "./Header.scss";
 
 const Header = () => {
@@ -23,37 +25,28 @@ const Header = () => {
       <div className="header__logo">
         <img src={logo} />
       </div>
-      <ul className={active}>
-        <li className="header__item">
-          <a href="#!" className="header__link">
-            home
-          </a>
-        </li>
-        <li className="header__item">
-          <a href="#!" className="header__link">
-            tomorrow
-          </a>
-        </li>
-        <li className="header__item">
-          <a href="#!" className="header__link">
-            week
-          </a>
-        </li>
-        <li className="header__item">
-          <a href="#!" className="header__link">
-            map
-          </a>
-        </li>
-        <li className="header__item">
-          <a href="#!" className="header__btn">
-            log in
-          </a>
-          <a href="#!" className="header__btn">
-            sign in
-          </a>
-        </li>
-      </ul>
-
+      <div className={active}>
+        <NavLink className="header__link" to="/">
+          home
+        </NavLink>
+        <NavLink className="header__link" to="/next">
+          tomorrow
+        </NavLink>
+        <NavLink className="header__link" to="/week">
+          week
+        </NavLink>
+        <NavLink className="header__link" to="/map">
+          map
+        </NavLink>
+        <div>
+          <NavLink className="header__btn" to="/login">
+            LogIn
+          </NavLink>
+          <NavLink className="header__btn" to="/signup">
+            signUp
+          </NavLink>
+        </div>
+      </div>
       <div
         onClick={() => {
           headerActive();

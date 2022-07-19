@@ -1,58 +1,59 @@
 @import "../../constants/styles.scss";
 
-.header,
-.header__menu {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
 .header {
-  border-top: 2vh solid $red;
-  border-bottom: 2vh solid $red;
-  height: 11vh;
-  background-color: $white;
+  @include box-measure;
 
   &__menu {
-    gap: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2.5rem;
   }
 
   &__link {
     color: $red;
     transition: all 0.4s;
-    position: relative;
     padding-bottom: 0.2rem;
-    transition: all 0.3s;
+    position: relative;
   }
 
   &__link:hover {
     color: $green;
-    border-bottom: 0.2rem solid $green;
+  }
+
+  &__link::after {
+    @include link-style;
+  }
+
+  &__link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom;
   }
 
   &__btn {
     padding: 0.15rem 0.7rem;
-    border: 0.15rem solid $green;
+    border: 0.15rem solid $red;
     border-radius: $border;
-    color: $green;
+    color: $red;
     transition: all 0.5s;
-    margin-right: 0.5rem;
+    margin-left: 0.7rem;
+    cursor: pointer;
   }
 
-  &__btn:last-child {
-    border: 0.15rem solid $red;
-    color: $red;
+  &__btn:first-child {
+    border: 0.15rem solid $green;
+    color: $green;
   }
 
   &__btn:hover {
-    background: $red;
+    background: $green;
     color: $white;
-    border: 0.15rem solid $white;
+    border: 0.15rem solid $green;
   }
 
-  &__btn:last-child:hover {
-    background: $green;
-    border: 0.15rem solid $green;
+  &__btn:first-child:hover {
+    background: $red;
+    border: 0.15rem solid $red;
     color: $white;
   }
 

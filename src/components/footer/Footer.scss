@@ -1,13 +1,7 @@
 @import "../../constants/styles.scss";
 
 .footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 11vh;
-  border-top: 2vh solid $red;
-  border-bottom: 2vh solid $red;
-  background-color: $white;
+  @include box-measure;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -19,18 +13,27 @@
   }
 
   &__link a {
-    color: $green;
+    color: $red;
     transition: all 0.4s;
+    padding-bottom: 0.2rem;
+    position: relative;
   }
 
   &__link a:hover {
-    color: $red;
-    border-bottom: 0.2rem solid $red;
+    color: $green;
+  }
+
+  &__link a::after {
+    @include link-style;
+  }
+
+  &__link a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom;
   }
 
   &__text {
-    font-style: italic;
-    color: $red;
+    color: $green;
     max-width: 100%;
     font-family: "Cookie", cursive;
     font-size: 1.3rem;
